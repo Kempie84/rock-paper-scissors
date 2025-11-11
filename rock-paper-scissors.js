@@ -1,9 +1,7 @@
-console.log("Hello World")
-
 //Declare computer choice variable of type string default value ""
-
+const computerChoice = "";
 //Declare user choice variable of type string default value ""
-
+const humanChoice = "";
 /*Function getComputerChoice() will generate computer choice of rock, paper or scissors 
 and store it in computer choice variable, using math.random to generate random choice */
 
