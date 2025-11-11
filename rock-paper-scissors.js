@@ -21,12 +21,12 @@ function getComputerChoice(){
 computerChoice = getComputerChoice();
 console.log(computerChoice);
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
-"Choose your weapon (only rock, paper or scissors)". Store choice in user choice variable */
+"Choose your weapon! (only rock, paper or scissors)". Store choice in user choice variable */
 
 // Declare humanScore variable type int default value 0
-
+let humanScore = 0;
 // Declare computerScore variable type int default value 0
-
+let computerScore = 0;
 /* Create function playRound that compares the choices of Human and Computer,
 it takes two parameters as arguments(humanChoice and computerChoice), 
 stores the choices in new constants.
