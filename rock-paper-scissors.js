@@ -1,14 +1,25 @@
 //Declare computer choice variable of type string default value ""
-const computerChoice = "";
+let computerChoice = "";
 //Declare user choice variable of type string default value ""
-const humanChoice = "";
+let humanChoice = "";
 /*Function getComputerChoice() will generate computer choice of rock, paper or scissors 
 and store it in computer choice variable, using math.random to generate random choice */
 function getComputerChoice(){
+    //generate a random number and assign it to randomNumber variable
     let randomNumber = Math.random();
     console.log(randomNumber);
+    // convert randomNumber to rock, paper or scissors
+    if (randomNumber <= 0.333) {
+        return "rock";
+    } else if (randomNumber >= 0.666) {
+        return "scissors";
+    } else {
+        return "paper";
+    }
 };
-getComputerChoice();
+
+computerChoice = getComputerChoice();
+console.log(computerChoice);
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
 "Choose your weapon (only rock, paper or scissors)". Store choice in user choice variable */
 
