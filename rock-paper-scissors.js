@@ -4,7 +4,11 @@ const computerChoice = "";
 const humanChoice = "";
 /*Function getComputerChoice() will generate computer choice of rock, paper or scissors 
 and store it in computer choice variable, using math.random to generate random choice */
-
+function getComputerChoice(){
+    let randomNumber = Math.random();
+    console.log(randomNumber);
+};
+getComputerChoice();
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
 "Choose your weapon (only rock, paper or scissors)". Store choice in user choice variable */
 
@@ -24,6 +28,6 @@ Increment winners score by 1 */
 
 It contains function playRound() and the score variables
 
-It plays five rounds using a for loop.
+It plays five rounds using a for loop. */
 
 
