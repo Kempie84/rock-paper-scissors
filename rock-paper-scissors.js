@@ -20,7 +20,7 @@ function getComputerChoice(){
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
 "Choose your weapon! (only rock, paper or scissors)". Store choice in user choice variable */
 function getHumanChoice() {
-    return prompt("Choose your weapon: rock, paper or scissors?)").toLowerCase();
+    return prompt("Choose your weapon: rock, paper or scissors?").toLowerCase();
 }
 // Declare humanScore variable type int default value 0
 let humanScore = 0;
