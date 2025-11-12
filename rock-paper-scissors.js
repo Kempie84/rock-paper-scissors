@@ -7,7 +7,6 @@ and store it in computer choice variable, using math.random to generate random c
 function getComputerChoice(){
     //generate a random number and assign it to randomNumber variable
     let randomNumber = Math.random();
-    console.log(randomNumber);
     // convert randomNumber to rock, paper or scissors
     if (randomNumber <= 0.333) {
         return "rock";
