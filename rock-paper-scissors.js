@@ -60,6 +60,14 @@ function playRound(computerChoice, humanChoice){
             console.log("You Lose! Scissors beat paper.");
             computerScore += 1;
             break;
+        case "scissorspaper":
+            console.log("You Win! Scissors beat paper.");
+            humanScore += 1;
+            break;
+        case "scissorsrock":
+            console.log("You Lose! Rock beats scissors");
+            computerScore += 1;
+            break;
     }
 }
 
