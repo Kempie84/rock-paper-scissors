@@ -18,15 +18,11 @@ function getComputerChoice(){
     }
 };
 
-computerChoice = getComputerChoice();
-console.log(computerChoice);
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
 "Choose your weapon! (only rock, paper or scissors)". Store choice in user choice variable */
 function getHumanChoice() {
     return prompt("Choose your weapon: rock, paper or scissors?)").toLowerCase();
 }
-humanChoice = getHumanChoice();
-console.log(humanChoice);
 // Declare humanScore variable type int default value 0
 let humanScore = 0;
 // Declare computerScore variable type int default value 0
@@ -38,7 +34,7 @@ stores the choices in new constant.*/
 //compare choices and declare a winner using console.log
 //Increment winners score by 1 */
 function playRound(computerChoice, humanChoice){
-    switch(computerChoice + humanChoice) {
+    switch(humanChoice + computerChoice) {
         case "rockrock":
             console.log("You both chose rock, it's a tie!");
             break;
@@ -67,9 +63,6 @@ function playRound(computerChoice, humanChoice){
     }
 }
 
-playRound(computerChoice, humanChoice);
-console.log(`Player score: ${humanScore}`);
-console.log(`Computer score: ${computerScore}`);
 
 
 
@@ -80,4 +73,12 @@ console.log(`Computer score: ${computerScore}`);
 
 //It plays five rounds using a for loop. */
 
+for (let i = 0; i < 5; i++){
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
 
+    console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
+    playRound(computerChoice, humanChoice);
+    console.log(`Player score: ${humanScore}`);
+    console.log(`Computer score: ${computerScore}`);
+};
