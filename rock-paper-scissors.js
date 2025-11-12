@@ -22,23 +22,62 @@ computerChoice = getComputerChoice();
 console.log(computerChoice);
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
 "Choose your weapon! (only rock, paper or scissors)". Store choice in user choice variable */
-
+function getHumanChoice() {
+    return prompt("Choose your weapon: rock, paper or scissors?)").toLowerCase();
+}
+humanChoice = getHumanChoice();
+console.log(humanChoice);
 // Declare humanScore variable type int default value 0
 let humanScore = 0;
 // Declare computerScore variable type int default value 0
 let computerScore = 0;
 /* Create function playRound that compares the choices of Human and Computer,
 it takes two parameters as arguments(humanChoice and computerChoice), 
-stores the choices in new constants.
+stores the choices in new constant.*/
 
-compare choices and declare a winner using console.log
+//compare choices and declare a winner using console.log
+//Increment winners score by 1 */
+function playRound(computerChoice, humanChoice){
+    switch(computerChoice + humanChoice) {
+        case "rockrock":
+            console.log("You both chose rock, it's a tie!");
+            break;
+        case "paperpaper":
+            console.log("You both chose paper, it's a tie!");
+            break;
+        case "scissorsscissors":
+            console.log("You both chose scissors, it's a tie!");
+            break;
+        case "rockscissors":
+            console.log("You Win! Rock beats scissors.");
+            humanScore += 1;
+            break;
+        case "rockpaper":
+            console.log("You Lose! Paper beats Rock.");
+            computerScore +=1;
+            break;
+        case "paperrock":
+            console.log("You Win! Paper beats rock.");
+            humanScore += 1;
+            break;
+        case "paperscissors":
+            console.log("You Lose! Scissors beat paper.");
+            computerScore += 1;
+            break;
+    }
+}
 
-Increment winners score by 1 */
+playRound(computerChoice, humanChoice);
+console.log(`Player score: ${humanScore}`);
+console.log(`Computer score: ${computerScore}`);
 
-/* Create function playGame()
 
-It contains function playRound() and the score variables
 
-It plays five rounds using a for loop. */
+
+// Create function playGame()
+
+//It contains function playRound() and the score variables
+
+//It plays five rounds using a for loop. */
 
 
