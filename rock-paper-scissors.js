@@ -80,14 +80,12 @@ function playRound(computerChoice, humanChoice){
 
 //It plays five rounds using a for loop. */
 const playGame = function() {
-    for (let i = 0; i < 5; i++){
-        computerChoice = getComputerChoice();
-        humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    humanChoice = getHumanChoice();
 
-        console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
-        playRound(computerChoice, humanChoice);
-        console.log(`Player score: ${humanScore}`);
-        console.log(`Computer score: ${computerScore}`);
-    };
+    console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
+    playRound(computerChoice, humanChoice);
+    console.log(`Player score: ${humanScore}`);
+    console.log(`Computer score: ${computerScore}`);
 };
 playGame();
