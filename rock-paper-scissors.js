@@ -20,7 +20,7 @@ function getComputerChoice(){
 /*Function getHumanChoice() will get the choice of rock, paper or scissors using a prompt:
 "Choose your weapon! (only rock, paper or scissors)". Store choice in user choice variable */
 function getHumanChoice() {
-    return prompt("Choose your weapon: rock, paper or scissors?").toLowerCase();
+    return prompt("Choose your weapon: rock, paper or scissors?t").toLowerCase();
 }
 // Declare humanScore variable type int default value 0
 let humanScore = 0;
@@ -79,13 +79,15 @@ function playRound(computerChoice, humanChoice){
 //It contains function playRound() and the score variables
 
 //It plays five rounds using a for loop. */
+const playGame = function() {
+    for (let i = 0; i < 5; i++){
+        computerChoice = getComputerChoice();
+        humanChoice = getHumanChoice();
 
-for (let i = 0; i < 5; i++){
-    computerChoice = getComputerChoice();
-    humanChoice = getHumanChoice();
-
-    console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
-    playRound(computerChoice, humanChoice);
-    console.log(`Player score: ${humanScore}`);
-    console.log(`Computer score: ${computerScore}`);
+        console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
+        playRound(computerChoice, humanChoice);
+        console.log(`Player score: ${humanScore}`);
+        console.log(`Computer score: ${computerScore}`);
+    };
 };
+playGame();
