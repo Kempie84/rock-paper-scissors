@@ -67,8 +67,8 @@ function playRound(computerChoice, humanChoice){
             console.log("You Lose! Rock beats scissors");
             computerScore += 1;
             break;
-    }
-}
+    };
+};
 
 
 
@@ -88,4 +88,3 @@ const playGame = function() {
     console.log(`Player score: ${humanScore}`);
     console.log(`Computer score: ${computerScore}`);
 };
-playGame();
