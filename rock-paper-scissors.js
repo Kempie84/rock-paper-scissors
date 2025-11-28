@@ -79,12 +79,21 @@ function playRound(computerChoice, humanChoice){
 //It contains function playRound() and the score variables
 
 //It plays five rounds using a for loop. */
-const playGame = function() {
+const playGame = function(choice) {
     computerChoice = getComputerChoice();
-    humanChoice = getHumanChoice();
+    humanChoice = choice.toLowerCase();
 
     console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
     playRound(computerChoice, humanChoice);
     console.log(`Player score: ${humanScore}`);
     console.log(`Computer score: ${computerScore}`);
 };
+
+const buttons = document.querySelectorAll("button");
+console.log(buttons);
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        playGame(button.id);
+    });
+});
