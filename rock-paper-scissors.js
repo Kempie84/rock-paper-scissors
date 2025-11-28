@@ -83,10 +83,9 @@ const playGame = function(choice) {
     computerChoice = getComputerChoice();
     humanChoice = choice.toLowerCase();
 
-    console.log(`You chose ${humanChoice}, the Computer chose ${computerChoice}`);
     playRound(computerChoice, humanChoice);
-    console.log(`Player score: ${humanScore}`);
-    console.log(`Computer score: ${computerScore}`);
+    
+    
 };
 
 const buttons = document.querySelectorAll("button");
