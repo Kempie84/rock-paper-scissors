@@ -85,7 +85,11 @@ const playGame = function(choice) {
 
     playRound(computerChoice, humanChoice);
     
-    
+    const playerScoreBoard = document.querySelector("#playerScore");
+    playerScoreBoard.textContent = `${humanScore}`;
+
+    const computerScoreBoard = document.querySelector("#computerScore");
+    computerScoreBoard.textContent = `${computerScore}`;
 };
 
 const buttons = document.querySelectorAll("button");
