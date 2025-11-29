@@ -88,10 +88,10 @@ const playGame = function(choice) {
     playRound(computerChoice, humanChoice);
     
     const playerScoreBoard = document.querySelector("#playerScore");
-    playerScoreBoard.textContent = `${humanScore}`;
+    playerScoreBoard.textContent = `Player: ${humanScore}`;
 
     const computerScoreBoard = document.querySelector("#computerScore");
-    computerScoreBoard.textContent = `${computerScore}`;
+    computerScoreBoard.textContent = `Computer: ${computerScore}`;
 
     if (humanScore > 4) {
         alert("You win!");
