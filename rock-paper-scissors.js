@@ -33,38 +33,40 @@ stores the choices in new constant.*/
 //compare choices and declare a winner using console.log
 //Increment winners score by 1 */
 function playRound(computerChoice, humanChoice){
+    const gameInfo = document.querySelector("#gameInfo");
+
     switch(humanChoice + computerChoice) {
         case "rockrock":
-            console.log("You both chose rock, it's a tie!");
+            gameInfo.textContent = "You both chose rock, it's a tie!";
             break;
         case "paperpaper":
-            console.log("You both chose paper, it's a tie!");
+            gameInfo.textContent = "You both chose paper, it's a tie!";
             break;
         case "scissorsscissors":
-            console.log("You both chose scissors, it's a tie!");
+            gameInfo.textContent = "You both chose scissors, it's a tie!";
             break;
         case "rockscissors":
-            console.log("You Win! Rock beats scissors.");
+            gameInfo.textContent = "You Win! Rock beats scissors.";
             humanScore += 1;
             break;
         case "rockpaper":
-            console.log("You Lose! Paper beats Rock.");
+            gameInfo.textContent = "You Lose! Paper beats Rock.";
             computerScore +=1;
             break;
         case "paperrock":
-            console.log("You Win! Paper beats rock.");
+            gameInfo.textContent = "You Win! Paper beats rock.";
             humanScore += 1;
             break;
         case "paperscissors":
-            console.log("You Lose! Scissors beat paper.");
+            gameInfo.textContent = "You Lose! Scissors beat paper.";
             computerScore += 1;
             break;
         case "scissorspaper":
-            console.log("You Win! Scissors beat paper.");
+            gameInfo.textContent = "You Win! Scissors beat paper.";
             humanScore += 1;
             break;
         case "scissorsrock":
-            console.log("You Lose! Rock beats scissors");
+            gameInfo.textContent = "You Lose! Rock beats scissors.";
             computerScore += 1;
             break;
     };
