@@ -92,6 +92,14 @@ const playGame = function(choice) {
 
     const computerScoreBoard = document.querySelector("#computerScore");
     computerScoreBoard.textContent = `${computerScore}`;
+
+    if (humanScore > 4) {
+        alert("You win!");
+        location.reload();
+    } else if (computerScore > 4) {
+        alert ("You lose!");
+        location.reload();
+    };
 };
 
 const buttons = document.querySelectorAll("button");
